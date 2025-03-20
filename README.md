@@ -29,6 +29,58 @@ Professor: <a href="https://www.linkedin.com/in/jefferson-o-silva/">Jefferson de
 1. No terminal, dentro da pasta raiz do respositório, execute esse comando para instalar as dependências necessárias:
 - `pip install requests`
 2. Execute o comando python logs.test.py para executar o teste.
+3. Verifique o terminal para visualizar a resposta do teste. 
+
+## Resultados
+
+1. **Test PASSED**
+
+| **Item**            | **Descrição**                                                                                   |
+|----------------------|-----------------------------------------------------------------------------------------------|
+| **ID do Teste**      | TC01                                                                                         |
+| **Objetivo**         | Validar se o endpoint de `GET` dos logs retorna os dados corretamente.                        |
+| **Pré-condição**     | - O mock da API foi configurado para simular uma resposta bem-sucedida.                       |
+| **Procedimento**     | 1. Enviar uma requisição GET simulada para o endpoint de logs. <br> 2. Verificar o retorno.   |
+| **Resultado Esperado** | A API deve retornar status `200 OK` e uma lista de logs.                                      |
+| **Resultado Obtido**  | **Test PASSED: Logs retornados com sucesso!** <br> Quantidade de logs: 2 <br> Exemplo de log: `{'id': 1, 'action': 'Marcou um novo atendimento', 'action_time': '2024-03-23T13:57:00', 'user_id': 123, 'details': 'Atendimento marcado para o aluno João Silva', 'appointment_id': 456}` |
+| **Pós-condição**     | Os logs foram retornados corretamente e estão no formato esperado.                            |
+
+---
+
+<div align="center">
+  <sub>Figura X - Resultado do teste de logs retornados corretamente </sub> <br>
+
+  <img src="logs_encontrados.png">
+
+  <sup>Fonte: autoria própria.</sup>
+</div>
+
+1. **Test PASSED com lista vazia de logs**
+
+| **Item**            | **Descrição**                                                                                   |
+|----------------------|-----------------------------------------------------------------------------------------------|
+| **ID do Teste**      | TC02                                                                                         |
+| **Objetivo**         | Captar quando o endpoint de `GET` consegue fazer o envio de dados, mas a lista está vazia.                     |
+| **Pré-condição**     | - O mock da API foi configurado para simular uma resposta bem-sucedida.                       |
+| **Procedimento**     | 1. Enviar uma requisição GET simulada para o endpoint de logs. <br> 2. Verificar o retorno.   |
+| **Resultado Esperado** | A API deve retornar status `200 OK` e uma mensagem informando que nenhum log foi encontrado.                                      |
+| **Resultado Obtido**  | **Test PASSED: Logs retornados com sucesso!** <br> Quantidade de logs: 0 <br> Exemplo de log: Nenhum log encontrado` |
+| **Pós-condição**     | Os logs foram retornados corretamente e estão no formato esperado.                            |
+
+---
+
+<div align="center">
+  <sub>Figura X - Resultado do teste de uma resposta vazia de json (nenhum log encontrado) </sub> <br>
+
+  <img src="lista_vazia_logs.png">
+
+  <sup>Fonte: autoria própria.</sup>
+</div>
+
+
+## **Conclusão do Teste**
+
+&ensp;O teste foi bem-sucedido, demonstrando que o endpoint de logs está funcionando conforme o esperado. Quando o mock da API retornou os dados corretamente, e a função de teste conseguiu processar e exibir as informações dos logs. Quando o Mock simulou uma entrada incorreta, o teste foi capaz de captar esse cenário e exibir o status de 'Test FAILED'.
 
 ## Referências
 

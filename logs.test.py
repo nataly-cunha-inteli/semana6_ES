@@ -1,7 +1,7 @@
 import requests
 from unittest.mock import Mock
 
-# Mock da resposta da API, já que não se tem endpoint implementado e registros no banco de dados
+# Mock da resposta da API, já que não se tem endpoint implementado e registros no banco de dados. Caso contrário, esse bloco de código não existiria.
 def mock_obter_logs():
     
     mock_response = Mock()
@@ -34,7 +34,7 @@ def mock_obter_logs():
 
 # Função que simula a requisição GET para obter logs
 def obter_logs():
-    requests.get = mock_obter_logs()
+    requests.get = mock_obter_logs() # Caso o endpoint existisse, a requisição seria requests.get("(link do endpoint que recupera os logs)")
     response = requests.get
     
     # Verifica o resultado
