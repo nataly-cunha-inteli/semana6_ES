@@ -50,7 +50,7 @@ Professor: <a href="https://www.linkedin.com/in/jefferson-o-silva/">Jefferson de
 <div align="center">
   <sub>Figura X - Resultado do teste de logs retornados corretamente </sub> <br>
 
-  <img src="logs_encontrados.png">
+  <img src="logs_encontrados.png"  width=70%>
 
   <sup>Fonte: autoria própria.</sup>
 </div>
@@ -72,7 +72,7 @@ Professor: <a href="https://www.linkedin.com/in/jefferson-o-silva/">Jefferson de
 <div align="center">
   <sub>Figura X - Resultado do teste de uma resposta vazia de json (nenhum log encontrado) </sub> <br>
 
-  <img src="lista_vazia_logs.png">
+  <img src="lista_vazia_logs.png" width=70%>
 
   <sup>Fonte: autoria própria.</sup>
 </div>
